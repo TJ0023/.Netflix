@@ -1,7 +1,7 @@
 # .Netflix
 Creating a Netflix clone with the use of React, Tailwind CSS, and Firebase for authentication
 
-Not much to say about it as of the moment as I'm tired but I will definitely praise Tailwin CSS with how intuitive
+Not much to say about it as of the moment as I'm tired but I will definitely praise Tailwind CSS with how intuitive
 its class descriptions are in making quick designs that are nice and sleek.
 
 I encountered some issues in saving the user's 'Saved Shows' in the user database
