@@ -1,4 +1,4 @@
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route} from 'react-router-dom';
 import Navbar from "./components/Navbar";
 import { AuthContextProvider } from './context/AuthContext';
 import Account from './pages/Account';
@@ -28,7 +28,7 @@ function App() {
           <ProtectedRoute> 
             <Account />          
           </ProtectedRoute>} />
-
+          <Route path="*" element={<Home />} />
         </Routes>
       </AuthContextProvider>
     </>
