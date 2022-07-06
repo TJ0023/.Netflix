@@ -37,7 +37,7 @@ const Row = ({title, fetchURL, rowID}) => {
       <div className='relative flex items-center group'>
         <MdChevronLeft 
         onClick={slideLeft} 
-        className='bg-white rounded-full left-0 absolute opacity-20 hover:opacity-90 cursor-pointer z-10 hidden group-hover:block'
+        className='bg-white rounded-full left-0 absolute opacity-20 hover:opacity-90 cursor-pointer z-50 hidden group-hover:block'
         size={40} />
         <div id={'slider' + rowID} className='w-full h-full overflow-x-scroll whitespace-nowrap scroll-smooth scrollbar-hide relative'>
             {movies.map((item, id) => (
@@ -46,7 +46,7 @@ const Row = ({title, fetchURL, rowID}) => {
         </div>
         <MdChevronRight 
         onClick={slideRight} 
-        className='bg-white rounded-full right-0 absolute opacity-20 hover:opacity-90 cursor-pointer z-10 hidden group-hover:block'
+        className='bg-white rounded-full right-0 absolute opacity-20 hover:opacity-90 cursor-pointer z-50 hidden group-hover:block'
         size={40} />
       </div>
     </>

@@ -32,11 +32,12 @@ const Movie = ({ item }) => {
 
     <div className='w-[160px] sm:w-[200px] md:w-[240px] lg:w-[280px] inline-block cursor-pointer relative p-2'>
         <img className='w-full h-auto block'src={`https://image.tmdb.org/t/p/w500/${item?.backdrop_path}`}alt={item?.title} />
-    <div className='transition ease duration-200 absolute top-0 left-0 w-full h-full hover:bg-black/80 opacity-0 hover:opacity-100 text-white hover:ease-in-out'>
+    <div className='transition ease duration-200 absolute top-0 left-0 w-full h-full hover:bg-black/80 opacity-0 hover:opacity-100 text-white hover:ease-in-out hover:z-40'>
    
-   <p className=' white-space-normal text-[10px] md:text-xs font-bold flex justify-center items-center h-full text-center break-normal flex-wrap'>
+   <p className='text-[10px] md:text-xs font-bold flex h-full text-center break-normal flex-col flex-wrap justify-center items-center content-center'>
        {item?.title}
    </p>
+
    <p onClick={saveShow}>
           {like ? (
             <FaHeart className='absolute top-4 left-4 text-yellow-500' />
