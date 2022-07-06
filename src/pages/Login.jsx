@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { useNavigate } from 'react-router-dom'
+import { useNavigate, Link } from 'react-router-dom'
 import { UserAuth } from '../context/AuthContext'
 
 const Login = () => {
@@ -17,7 +17,7 @@ const Login = () => {
             navigate('.Netflix')            
         } catch (error) {
             console.log(error)
-            setError(error.message)
+            setError('Invalid Email or Password.')
         }
     }
 
@@ -35,14 +35,18 @@ const Login = () => {
                     <form onSubmit={handleSubmit} className='w-full flex flex-col py-4'>
                         <input onChange={(e) => setEmail(e.target.value.toLowerCase())}
                         className='p-3 my-2 bg-gray-700 rounded' type="email" placeholder='Email' required autoComplete='email' />
-                        <input onChange={(e) => setPassword(e.target.value.toLowerCase())}
+                        <input onChange={(e) => setPassword(e.target.value)}
                         className='p-3 my-2 bg-gray-700 rounded' type="password" placeholder='Password' required/>
-                        <button className='bg-red-600 py-3 my-6 rounded font-bold'>Sign In</button>
+                        <button className='transition ease-in duration:300 bg-red-600 py-3 my-6 rounded font-bold hover:bg-red-800'>Sign In</button>
                         
                         <div className='flex items-center justify-between text-sm text-gray-400'>
                             <p><input className='mr-2' type="checkbox"/> Remember Me</p>
                         </div>
-
+                        <p className='py-8'><span className='text-gray-400 mx-2'> Not yet subscribed?</span> 
+                        <Link to='../.Netflix/signup'>
+                        Sign Up
+                        </Link>
+                        </p>
                     </form>
                 </div>
             </div>

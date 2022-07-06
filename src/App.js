@@ -15,16 +15,16 @@ function App() {
       <Navbar />
         <Routes>
           <Route path='.Netflix' element={<Home />} />
-          <Route path='/login' element={
+          <Route path='.Netflix/login' element={
               <ProtectedRoute2> 
           <Login />
           </ProtectedRoute2>} />
-          <Route path='/signup' element={
+          <Route path='.Netflix/signup' element={
               <ProtectedRoute2> 
           <SignUp />
           </ProtectedRoute2>} />
        
-          <Route path='/account' element={   
+          <Route path='.Netflix/account' element={   
           <ProtectedRoute> 
             <Account />          
           </ProtectedRoute>} />

@@ -26,7 +26,7 @@ const Navbar = () => {
 
     {user?.email ? (  
     <div>
-        <Link to='/account'>
+        <Link to='.Netflix/account'>
             <button className='text-white pr-4 '>Account</button>
         </Link>
             <button onClick={handleLogout} className='transition ease-in duration:300 bg-red-600 px-6 py-2 rounded cursor-pointer text-white hover:bg-red-800'>
@@ -35,11 +35,11 @@ const Navbar = () => {
         </div>
         ) : (
       <div>
-          <Link to='/login'>
+          <Link to='.Netflix/login'>
               <button className='text-white pr-4 '>Sign In</button>
           </Link>
   
-          <Link to='/signup'> 
+          <Link to='.Netflix/signup'> 
               <button className='transition ease-in duration:300 bg-red-600 px-6 py-2 rounded cursor-pointer text-white hover:bg-red-800'>
                 Sign Up
                 </button>
