@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { UserAuth } from '../context/AuthContext'
+import { db } from '../firebase';
+import { doc } from 'firebase/firestore';
 
 const SignUp = () => {
     const [email, setEmail] = useState('')
@@ -10,6 +12,8 @@ const SignUp = () => {
     const navigate = useNavigate()
     const [error, setError] = useState('');
 
+
+
     const handleSubmit = async (e) => {
         e.preventDefault()
         setError('')
@@ -18,7 +22,7 @@ const SignUp = () => {
         }
         try {
             await signUp(email,password)
-            navigate('/')            
+            navigate('../Netflix')            
         } catch (error) {
             setError(error.message)
         }

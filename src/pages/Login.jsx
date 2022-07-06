@@ -14,7 +14,7 @@ const Login = () => {
         setError('')
         try {
             await logIn(email,password)
-            navigate('.Netflix')            
+            navigate('../.Netflix')            
         } catch (error) {
             console.log(error)
             setError('Invalid Email or Password.')
